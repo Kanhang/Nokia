@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<title>D&D network dashboard</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" /> 
+	<!-- Morris Chart Styles-->
+    <link href="js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+	    <!-- Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="js/Lightweight-Chart/cssCharts.css"> 
+  </head>
+
+<body>
+  <meta http-equiv="refresh" content="10">
+  <!-- container section start -->
+  <section id="container" class="">
+     
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+
+            <!--logo start-->
+            <a href="index.html" class="logo"><font size="5" color="white"><b>NOKIA<b></font></span>&nbsp</span></span>&nbsp</span></span>&nbsp</span><font size="4"><span class="lite"><font color="orange">R&D</font></span>&nbsp<span class="lite">network</span>&nbsp<span class="lite">Dashboard</span></a></font>
+            <div class="top-nav notification-row">                
+			<ul class="nav navbar-top-links navbar-right"> 
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+            </ul>
+			</div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="index.html">
+                          <i class="icon_piechart"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  <li>                     
+                      <a class="" href="Tools.html">
+                          <i class="icon_tools"></i>
+                          <span>Tools</span>
+                          
+                      </a>                   
+                  </li>
+                  <li>                     
+                      <a class="" href="Alarm.html">
+                          <i class="icon_clock"></i>
+                          <span>Alarm</span>
+                          
+                      </a>                
+                  </li>
+				  <li>                     
+                      <a class="" href="#">
+                          <i class="icon_genius"></i>
+                          <span>IP usage</span>
+                          
+                      </a>                  
+                  </li>
+				  <li>                     
+                      <a class="" href="http://switch-backup.com/admin/">
+                          <i class="icon_table"></i>
+                          <span>Switch info</span>
+                          
+                      </a>                 
+                  </li>
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">		  
+              <!--overview start-->
+			  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="icon_piechart"></i>Dashboard</h3>
+
+				</div>
+			</div>
+              
+            <div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box blue-bg">
+						<i class="fa fa-bar-chart"></i>
+						<div class="count">649</div>
+						<div class="title"><font size="3" face="Verdana">Total switch</font></div>						
+					</div><!--/.info-box-->			
+				</div><!--/.col-->
+				
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box brown-bg">
+						<i class="fa fa-thermometer-full"></i>
+						<div class="count">630</div>
+						<div class="title"><font size="3" face="Verdana">Total switch Online</font></div>						
+					</div><!--/.info-box-->			
+				</div><!--/.col-->	
+				
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box dark-bg">
+						<i class="fa fa-area-chart"></i>
+						<div class="count">625</div>
+						<div class="title"><font size="3" face="Verdana">Total switch in ISE</font></div>						
+					</div><!--/.info-box-->			
+				</div><!--/.col-->
+				
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box green-bg">
+						<i class="fa fa-line-chart"></i>
+						<div class="count">625</div>
+						<div class="title"><font size="3" face="Verdana">Total switch in backup</font></div>						
+					</div>		
+				</div>
+				
+            </div>
+			
+			<div class="row">
+			
+				<div class="col-md-9"> 
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>Total monthly statistics for DU</strong></h2>
+							<div class="panel-actions">
+							</div>
+						</div>
+						<div class="card">
+						<div class="card-image">
+						 <div id="morris-line-chart"></div>
+						</div> 
+						<!--<div class="card-action">
+						</div>-->
+						</div>
+		  
+			    </div>
+			</div>
+				<div class="col-md-3"> 
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>DUs proportion</strong></h2>
+							<div class="panel-actions">
+							</div>
+						</div>
+						<div class="card">
+						<div class="card-image donutpad">
+						 <div id="morris-donut-chart"></div>
+						</div> 
+						<!--<div class="card-action">
+						</div>-->
+						</div>	
+				</div>
+			</div>
+        </div>
+			    <div class="row">		
+			        <div class="col-md-6"> 
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>Brand report</strong></h2>
+							<div class="panel-actions">
+							</div>					
+					<div class="card">
+					<div class="card-image">
+					  <div id="morris-bar-chart"></div>
+					</div> 
+					<!--<div class="card-action">
+					</div>-->
+					</div>					
+			</div>
+            </div>
+            </div>			
+                 <div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>Abnormal report</strong></h2>
+							<div class="panel-actions">
+							</div>				 
+						<div class="card">
+					<div class="card-image">
+					  <div id="morris-area-chart"></div>
+					</div> 
+					<!--<div class="card-action">
+					</div>-->
+					</div>	
+			</div>
+			</div>
+            </div>
+            </div>			
+
+			<div class="row">
+               	
+				<div class="col-xs-12">	
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>HZ DU switch information</strong></h2>
+							<div class="panel-actions">
+								<!--<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>-->
+								<!--<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>-->
+								<!--<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>-->
+							</div>
+						</div>
+						<div class="panel-body">
+							<table class="table bootstrap-datatable countries">
+								<thead>
+									<tr>
+										<!--<th></th>-->
+										<th>DU</th>
+										<th>Totaly</th>
+										<th>Online</th>
+										<th>In ISE</th>
+										<th>In backup</th>
+										<th>Details</th>
+									</tr>
+								</thead>   
+								<tbody>
+									<tr>
+										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>4G-RAN<b></td>
+										<td>2563</td>
+										<td>2563</td>
+										<td>1025</td>
+										<td>1025</td>
+										<td><b><font color="darkred"><a href="4G-RAN.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>5G-RAN<b></td>
+										<td>3652</td>
+										<td>2563</td>
+										<td>2563</td>
+										<td>2563</td>
+										<td><b><font color="darkred"><a href="5G-RAN.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>Cloud<b></td>
+										<td>562</td>
+										<td>562</td>
+										<td>452</td>
+										<td>452</td>
+										<td><b><font color="darkred"><a href="Cloud.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>CloudCore<b></td>
+										<td>1258</td>
+										<td>1258</td>
+										<td>958</td>
+										<td>958</td>
+										<td><b><font color="darkred"><a href="CloudCore.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>E2E<b></td>
+										<td>4856</td>
+										<td>4856</td>
+										<td>3621</td>
+										<td>3621</td>
+										<td><b><font color="darkred"><a href="E2E.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>DX<b></td>
+										<td>265</td>
+										<td>265</td>
+										<td>102</td>
+										<td>3621</td>
+										<td><b><font color="darkred"><a href="DX.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>ECE<b></td>
+										<td>265</td>
+										<td>265</td>
+										<td>102</td>
+										<td>3621</td>
+										<td><b><font color="darkred"><a href="ECE.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>Hetran<b></td>
+										<td>265</td>
+										<td>265</td>
+										<td>102</td>
+										<td>3621</td>
+										<td><b><font color="darkred"><a href="Hetran.html">More detail</a></font><b></td>
+									</tr>
+									<tr>
+										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->
+										<td><b>SRAN<b></td>
+										<td>265</td>
+										<td>265</td>
+										<td>102</td>
+										<td>3621</td>
+										<td><b><font color="darkred"><a href="SRAN.html">More detail</a></font><b></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+	
+					</div>	
+                </div>
+              </div><br><br>
+              <!-- project team & activity end -->
+
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+		
+				
+				
+            
+
+
+
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>	
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="js/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/morris/morris.js"></script>
+	
+	
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	
+	 <script src="js/Lightweight-Chart/jquery.chart.js"></script>
+	
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script> 
+
+
+</body>
+</html>

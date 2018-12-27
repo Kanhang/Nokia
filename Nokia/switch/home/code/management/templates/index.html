@@ -1,0 +1,690 @@
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<title>HZ D&D network dashboard</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="/static/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- bootstrap theme -->
+    <link href="/static/css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- font icon -->
+    <link href="/static/css/elegant-icons-style.css" rel="stylesheet" />
+	<link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+	<!-- Morris Chart Styles-->
+    <link href="/static/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+	    <!-- Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="/static/js/Lightweight-Chart/cssCharts.css">
+
+  </head>
+
+<body>
+  <meta http-equiv="refresh" content="10;url='http://10.110.23.254/transfer_page/'">
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+
+            <!--logo start-->
+            <a href="http://10.110.23.254" class="logo"><font size="5" color="white"><b>NOKIA<b></font></span>&nbsp</span></span>&nbsp</span></span>&nbsp</span><font size="4"><span class="lite"><font color="orange">HZ  R&D</font></span>&nbsp<span class="lite">network</span>&nbsp<span class="lite">Dashboard</span></a></font>
+            <div class="top-nav notification-row">
+			<ul class="nav navbar-top-links navbar-right">
+            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+            </ul>
+			</div>
+      </header>
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">
+                  <li class="active">
+                      <a class="" href="http://10.110.23.254">
+                          <i class="icon_piechart"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  <li>
+                      <a class="" href="/tools/">
+                          <i class="icon_tools"></i>
+                          <span>Tools</span>
+
+                      </a>
+                  </li>
+                  <li>
+                      <a class="" href="/alarm/">
+                          <i class="icon_clock"></i>
+                          <span>Alarm</span>
+
+                      </a>
+                  </li>
+				  <li>
+                      <a class="" href="#">
+                          <i class="icon_genius"></i>
+                          <span>IP usage</span>
+
+                      </a>
+                  </li>
+				  <li>
+                      <a class="" href="http://10.110.23.254/admin/">
+                          <i class="icon_table"></i>
+                          <span>Switch info</span>
+
+                      </a>
+                  </li>
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+              <!--overview start-->
+			  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="icon_piechart"></i>Dashboard</h3>
+
+				</div>
+			</div>
+
+            <div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box blue-bg">
+						<i class="fa fa-bar-chart"></i>
+						<div class="count">{{ total }}</div>
+						<div class="title"><font size="3" face="Verdana">Total switch</font></div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box brown-bg">
+						<i class="fa fa-thermometer-full"></i>
+						<div class="count">{{ online }}</div>
+						<div class="title"><font size="3" face="Verdana">Switch Online</font></div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box dark-bg">
+						<i class="fa fa-area-chart"></i>
+						<div class="count">{{ success }}</div>
+						<div class="title"><font size="3" face="Verdana">Switch in ISE</font></div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="info-box green-bg">
+						<i class="fa fa-line-chart"></i>
+						<div class="count">{{ success }}</div>
+						<div class="title"><font size="3" face="Verdana"> Switch in backup</font></div>
+					</div>
+				</div>
+
+            </div>
+
+			<div class="row">
+
+				<div class="col-md-9">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>DU monthly report</strong></h2>
+							<div class="panel-actions">
+							</div>
+						</div>
+						<div class="card">
+						<div class="card-image">
+						 <div id="morris-line-chart"></div>
+						</div>
+						<!--<div class="card-action">
+						</div>-->
+						</div>
+
+			    </div>
+			</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>DU proportion</strong></h2>
+							<div class="panel-actions">
+							</div>
+						</div>
+						<div class="card">
+						<div class="card-image donutpad">
+						 <div id="morris-donut-chart"></div>
+						</div>
+						<!--<div class="card-action">
+						</div>-->
+						</div>
+				</div>
+			</div>
+        </div>
+			    <div class="row">
+			        <div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>Brand report</strong></h2>
+							<div class="panel-actions">
+							</div>
+					<div class="card">
+					<div class="card-image">
+					  <div id="morris-bar-chart"></div>
+					</div>
+					<!--<div class="card-action">
+					</div>-->
+					</div>
+			</div>
+            </div>
+            </div>
+                 <div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>Abnormal report</strong></h2>
+							<div class="panel-actions">
+							</div>
+						<div class="card">
+					<div class="card-image">
+					  <div id="morris-area-chart"></div>
+					</div>
+					<!--<div class="card-action">
+					</div>-->
+					</div>
+			</div>
+			</div>
+            </div>
+            </div>
+
+			<div class="row">
+
+				<div class="col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><strong>HZ DU switch information</strong></h2>
+							<div class="panel-actions">
+								<!--<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>-->
+								<!--<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>-->
+								<!--<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>-->
+							</div>
+						</div>
+						<div class="panel-body">
+							<table class="table bootstrap-datatable countries">
+								<thead>
+									<tr>
+										<!--<th></th>-->
+										<th>DU</th>
+										<th>Totaly</th>
+										<th>Online</th>
+										<th>In ISE</th>
+										<th>In backup</th>
+										<th>Standard name</th>
+										<th>Details</th>
+									</tr>
+								</thead>
+								<tbody>
+                                {% for data in data_table%}
+                                    <tr>
+                                    {% for i in data %}
+                                        <td>{{ i }}</td>
+                                        {% endfor %}
+                                    <td><b><font color="darkred"><a href="4G-RAN.html">More detail</a></font><b></td>
+                                    </tr>
+                                {% endfor %}
+{##}
+{#									<tr>#}
+{#										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>4G-RAN<b></td>#}
+{#										<td>2563</td>#}
+{#										<td>2563</td>#}
+{#										<td>1025</td>#}
+{#										<td>1025</td>#}
+{#										<td>1025</td>#}
+{#										<td><b><font color="darkred"><a href="4G-RAN.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>5G-RAN<b></td>#}
+{#										<td>3652</td>#}
+{#										<td>2563</td>#}
+{#										<td>2563</td>#}
+{#										<td>2563</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="5G-RAN.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>Cloud<b></td>#}
+{#										<td>562</td>#}
+{#										<td>562</td>#}
+{#										<td>452</td>#}
+{#										<td>452</td>#}
+{#										<td>563</td>#}
+{#										<td><b><font color="darkred"><a href="Cloud.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>CloudCore<b></td>#}
+{#										<td>1258</td>#}
+{#										<td>1258</td>#}
+{#										<td>958</td>#}
+{#										<td>958</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="CloudCore.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>E2E<b></td>#}
+{#										<td>4856</td>#}
+{#										<td>4856</td>#}
+{#										<td>3621</td>#}
+{#										<td>3621</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="E2E.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>DX<b></td>#}
+{#										<td>265</td>#}
+{#										<td>265</td>#}
+{#										<td>102</td>#}
+{#										<td>3621</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="DX.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>ECE<b></td>#}
+{#										<td>265</td>#}
+{#										<td>265</td>#}
+{#										<td>102</td>#}
+{#										<td>3621</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="ECE.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>Hetran<b></td>#}
+{#										<td>265</td>#}
+{#										<td>265</td>#}
+{#										<td>102</td>#}
+{#										<td>3621</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="Hetran.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+{#									<tr>#}
+{#										<!--<td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>-->#}
+{#										<td><b>SRAN<b></td>#}
+{#										<td>265</td>#}
+{#										<td>265</td>#}
+{#										<td>102</td>#}
+{#										<td>3621</td>#}
+{#										<td>2563</td>#}
+{#										<td><b><font color="darkred"><a href="SRAN.html">More detail</a></font><b></td>#}
+{#									</tr>#}
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+
+                  </div>
+              </div><br><br>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+              <!-- project team & activity end -->
+
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+
+
+
+
+
+
+
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="/static/js/jquery-1.10.2.js"></script>
+	<script src="/static/materialize/js/materialize.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="/static/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="/static/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="/static/js/morris/morris.js"></script>
+
+
+	<script src="/static/js/easypiechart.js"></script>
+	<script src="/static/js/easypiechart-data.js"></script>
+
+	 <script src="/static/js/Lightweight-Chart/jquery.chart.js"></script>
+
+    <!-- Custom Js -->
+ <script type="text/javascript">
+
+(function ($) {
+  
+    var mainApp = {
+
+        initFunction: function () {
+            /*MENU
+            ------------------------------------*/
+            $('#main-menu').metisMenu();
+            var dulist={{ dulist|safe }};
+			var list={{list|safe}};
+
+			var labels={{ labels|safe }};
+			var ykeys={{ ykeys|safe }};
+			var final_type={{ final_type|safe }};
+			var ykeys_type={{ ykeys_type|safe }};
+			var labels_type={{ labels_type|safe }};
+            var abnormal_list={{ abnormal_list|safe }}
+            var date= new Date;
+            var year=date.getFullYear();
+            {% comment %}for (var i=0;i<list.length;i++) {
+                for (var key in list[i]){
+                   alert((list[i])[key]);
+                }
+                     }{% endcomment %}
+           {% comment %} for (var i=0;i<list.length;i++){
+                for(var j=0;j<list[i].length;j++){
+                    for(var k=0;k< list[i][j].length;k++){
+
+                        dict[seq[k]]=(list[i][j])[k];
+                        alert dict
+
+                    }
+                    data_list.push(dict); }}{% endcomment %}
+
+            $(window).bind("load resize", function () {
+                if ($(this).width() < 768) {
+                    $('div.sidebar-collapse').addClass('collapse')
+                } else {
+                    $('div.sidebar-collapse').removeClass('collapse')
+                }
+            });
+
+            /* MORRIS BAR CHART
+			-----------------------------------------*/
+            Morris.Bar({
+                element: 'morris-bar-chart',
+                data:final_type{% comment %}[{
+                    m: 'Jan',
+                    a: 10,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Feb',
+                    a: 75,
+                    b: 65,
+					c: 55
+                }, {
+                    m: 'Mar',
+                    a: 50,
+                    b: 40,
+					c: 55
+                }, {
+                    m: 'Apr',
+                    a: 75,
+                    b: 65,
+					c: 55
+                }, {
+                    m: 'May',
+                    a: 50,
+                    b: 40,
+					c: 55
+                }, {
+                    m: 'Jun',
+                    a: 75,
+                    b: 65,
+					c: 55
+                }, {
+                    m: 'Jul',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Aug',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Jul',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Oct',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Nov',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }, {
+                    m: 'Dec',
+                    a: 100,
+                    b: 90,
+					c: 80
+                }]{% endcomment %},
+                xkey: 'y',
+                ykeys: ykeys_type{% comment %}['a', 'b','c']{% endcomment %},
+                labels: labels_type{% comment %}['Dell', 'Cisco', 'Juniper']{% endcomment %},
+				 barColors: [
+    '#e96562','#414e63',
+    '#7EC0EE','#EEB422',
+    '#66CDAA'
+  ],
+                hideHover: 'auto',
+                resize: true
+            });
+
+
+
+            /* MORRIS DONUT CHART
+			----------------------------------------*/
+            Morris.Donut({
+                element: 'morris-donut-chart',
+                data:dulist {% comment %}[{
+                    label: "4GRAN",
+                    value: dulist[0]
+                }, {
+                    label: "5GRAN",
+                    value: dulist[1]
+                }, {
+                    label: "Cloud",
+                    value: dulist[2]
+                },{
+                    label: "CloudCore",
+                    value: dulist[3]
+                }, {
+                    label: "E2E",
+                    value: dulist[4]
+                }, {
+                    label: "DX",
+                    value: dulist[5]
+                }, {
+                    label: "ECE",
+                    value: dulist[6]
+                }, {
+                    label: "Hetran",
+                    value: dulist[7]
+                }, {
+                    label: "SRAN",
+                    value: dulist[8]
+                }]{% endcomment %},
+				   colors: [
+    'gray','#414e63',
+    '#C6E2FF','#7CCD7C',
+	'#CD3278','#00F5FF',
+	'#EED2EE','#B23AEE',
+  '#B22222','#BCEE68',
+  '#8E388E','#436EEE',
+  '#EEB422','#2F4F4F',
+  '#FF6347','#66CDAA'
+  ],
+                resize: true
+            });
+
+            /* MORRIS AREA CHART
+			----------------------------------------*/
+
+            Morris.Area({
+                element: 'morris-area-chart',
+                data: abnormal_list{% comment %}[{
+                    period: '2018-6-15',
+                    offline: 266,
+                    backupfailed: 200,
+                    nonstandardname: 2647
+                }, {
+                    period: '2018-6-14',
+                    offline: 2778,
+                    backupfailed: 2294,
+                    nonstandardname: 2441
+                }, {
+                    period: '2018-6-13',
+                    offline: 4912,
+                    backupfailed: 1969,
+                    nonstandardname: 2501
+                }, {
+                    period: '2018-6-12',
+                    offline: 3767,
+                    backupfailed: 3597,
+                    nonstandardname: 5689
+                }, {
+                    period: '2018-6-11',
+                    offline: 6810,
+                    backupfailed: 1914,
+                    nonstandardname: 2293
+                }, {
+                    period: '2018-6-10',
+                    offline: 5670,
+                    backupfailed: 4293,
+                    nonstandardname: 1881
+                }, {
+                    period: '2018-6-9',
+                    offline: 4820,
+                    backupfailed: 3795,
+                    nonstandardname: 1588
+                }]{% endcomment %},
+                xkey: 'period',
+                ykeys: ['offline', 'backupfailed', 'n-stdname'],
+                labels: ['offline', 'backupfailed', 'n-stdname'],
+                pointSize: 2,
+                hideHover: 'auto',
+				  pointFillColors:['#ffffff'],
+				  pointStrokeColors: ['black'],
+				  lineColors:['gray','#EED2EE','#BCEE68'],
+                resize: true
+            });
+
+            /* MORRIS LINE CHART
+			----------------------------------------*/
+            Morris.Line({
+                element: 'morris-line-chart',
+                data:list, /*[
+					  { y: year+'-01', a: list[0][1], b: list[0][2], c:list[0][3], d:list[0][4], e:list[0][5], f:list[0][6], g:list[0][7], h:list[0][8], i:list[0][9]},
+					  { y: year+'-02', a: list[1][1], b: list[1][2], c:list[1][3], d:list[1][4], e:list[1][5], f:list[1][6], g:list[1][7], h:list[1][8], i:list[1][9]},
+					  { y: year+'-03', a: list[2][1], b: list[2][2], c:list[2][3], d:list[2][4], e:list[2][5], f:list[2][6], g:list[2][7], h:list[2][8], i:list[2][9]},
+					  { y: year+'-04', a: list[3][1], b: list[3][2], c:list[3][3], d:list[3][4], e:list[3][5], f:list[3][6], g:list[3][7], h:list[3][8], i:list[3][9]},
+					  { y: year+'-05', a: list[4][1], b: list[4][2], c:list[4][3], d:list[4][4], e:list[4][5], f:list[4][6], g:list[4][7], h:list[4][8], i:list[4][9]},
+					  { y: year+'-06', a: list[5][1], b: list[5][2], c:list[5][3], d:list[5][4], e:list[5][5], f:list[5][6], g:list[5][7], h:list[5][8], i:list[5][9]},
+					  { y: year+'-07', a: list[6][1], b: list[6][2], c:list[6][3], d:list[6][4], e:list[6][5], f:list[6][6], g:list[6][7], h:list[6][8], i:list[6][9]},
+					  { y: year+'-08', a: list[7][1], b: list[7][2], c:list[7][3], d:list[7][4], e:list[7][5], f:list[7][6], g:list[7][7], h:list[7][8], i:list[7][9]},
+					  { y: year+'-09', a: list[8][1], b: list[8][2], c:list[8][3], d:list[8][4], e:list[8][5], f:list[8][6], g:list[8][7], h:list[8][8], i:list[8][9]},
+					  { y: year+'-10', a: list[9][1], b: list[9][2], c:list[9][3], d:list[9][4], e:list[9][5], f:list[9][6], g:list[9][7], h:list[9][8], i:list[9][9]},
+					  { y: year+'-11', a: list[10][1], b: list[10][2], c:list[10][3], d:list[10][4], e:list[10][5], f:list[10][6], g:list[10][7], h:list[10][8], i:list[10][9]},
+					  { y: year+'-12', a: list[11][1], b: list[11][2], c:list[11][3], d:list[11][4], e:list[11][5], f:list[11][6], g:list[11][7], h:list[11][8], i:list[11][9]},
+				],*/
+
+
+      xkey: 'y',
+      ykeys: ykeys, //['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],                                   //max_length
+      labels: labels, //['4GRAN', '5GRAN', 'Cloud', 'CloudCore', 'E2E', 'DX', 'ECE', 'Hetran', 'SRAN'], //max_length
+      fillOpacity: 0.6,
+      hideHover: 'auto',
+      behaveLikeLine: true,
+      resize: true,
+      pointFillColors:['#ffffff'],
+      pointStrokeColors: ['black'],
+      lineColors:['gray','#414e63','#C6E2FF','#7CCD7C','#CD3278','#00F5FF','#EED2EE','#B23AEE','#B22222','#BCEE68','#8E388E','#436EEE','#EEB422','#2F4F4F','#FF6347','#66CDAA']
+
+            });
+
+
+            $('.bar-chart').cssCharts({type:"bar"});
+            $('.donut-chart').cssCharts({type:"donut"}).trigger('show-donut-chart');
+            $('.line-chart').cssCharts({type:"line"});
+
+            $('.pie-thychart').cssCharts({type:"pie"});
+
+
+        },
+
+        initialization: function () {
+            mainApp.initFunction();
+
+        }
+
+    }
+    // Initializing ///
+
+    $(document).ready(function () {
+		$(".dropdown-button").dropdown();
+		$("#sideNav").click(function(){
+			if($(this).hasClass('closed')){
+				$('.navbar-side').animate({left: '0px'});
+				$(this).removeClass('closed');
+				$('#page-wrapper').animate({'margin-left' : '260px'});
+
+			}
+			else{
+			    $(this).addClass('closed');
+				$('.navbar-side').animate({left: '-260px'});
+				$('#page-wrapper').animate({'margin-left' : '0px'});
+			}
+		});
+
+        mainApp.initFunction();
+    });
+
+	$(".dropdown-button").dropdown();
+
+}(jQuery));
+
+      </script>
+      
+
+</body>
+
+</html>
+{% endblock %}

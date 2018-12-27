@@ -1,0 +1,56 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <form method="post" action="/upload/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <input type="file" name="excel"/>
+            <input type="submit" name="cancel" value="Cancel" />
+            <input type="submit" name="upload" value="Upload"/>
+
+        </p>
+    </form>
+    <div>
+    <br><br>
+    {% if total %}
+    ---------------------------------------------------------------
+        <p> Total data:<bold>{{total  }}</bold></p>
+
+    <p>Successfully import:<bold style="color:green">{{success}}</bold></p>
+
+        <p>Error num :<bold style="color:red">{{wrong}}</bold></p>
+
+        <p>Repetitive num:<bold style="color:red">{{repetitive}}</bold></p>
+
+        ---------------------------------------------------------------
+{% if wrong_ip %}
+        <p><bold><h2>Wrong IP list:</h2></bold></p>
+
+{% for item in wrong_ip %}
+    <li>{{ item }}</li>
+
+    {% endfor %}
+{% endif %}
+    </div>
+<div>
+    {% if repetitive_ip %}
+        <p><bold><h2>repetitive IP list comparing with database:</h2></bold></p>
+
+{% for item in repetitive_ip %}
+    <li>{{ item }}</li>
+
+    {% endfor %}
+{% endif %}
+    </div>
+<div>
+    {% if repetitive_ip_excel %}
+        <p><bold><h2>repetitive IP list in excel :</h2></bold></p>
+
+{% for item in repetitive_ip_excel %}
+    <li>{{ item }}</li>
+
+    {% endfor %}
+{% endif %}
+    </div>
+{% endif %}
+{% endblock %}

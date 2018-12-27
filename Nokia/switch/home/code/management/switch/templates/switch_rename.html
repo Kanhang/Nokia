@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Switch Rename</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="/static/css/fileinput.min.css" media="all" type="text/css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!--[if lte IE 8]>
+    <script src="/static/js/html5shiv.js"></script><![endif]-->
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/skel.min.js"></script>
+    <script src="/static/js/skel-panels.min.js"></script>
+    <script src="/static/js/init.js"></script>
+    <script src="/static/js/fileinput.js"></script>
+
+    <noscript>
+        <link rel="stylesheet" href="/static/css/skel-noscript.css"/>
+        <link rel="stylesheet" href="/static/css/style.css"/>
+        <link rel="stylesheet" href="/static/css/style-desktop.css"/>
+    </noscript>
+</head>
+<body>
+
+<div id="header-wrapper">
+
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1>SWITCH RENAME</h1>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="/">Homepage</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Banner -->
+    <!--<div id="banner">-->
+    <!--<div class="container">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!-- /Banner -->
+
+</div>
+
+<!-- Main -->
+<div id="hero-area">
+    <div class="container">
+        <div class="row">
+            <form action="/satistic/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-6">
+                    <div style="margin-bottom: 3em;">
+                        <a href="/renameTemplate/" class="button" style="margin-top: 0;">template download</a>
+                    </div>
+                </div>
+                <div class="col-md-12"></div>
+
+                <div class="col-md-12">
+                    <div style="margin-bottom: 3em;">
+                        <label form="gender" class="sr-only">FileUpload</label>
+                        <input name="excel" id="input-file" type="file"
+                               accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                               class="file" data-show-preview="false">
+                    </div>
+                </div>
+                <div class="col-md-8" id="satistic" style="color: black;font-size: 18px; font-weight: 300"></div>
+                <div class="col-md-2" id="log"></div>
+                <div class="col-md-2">
+                    <div class="form-group" id="run" style=" padding-left: 50px;">
+                        <a href="/execute_rename/" style="background-color:#827D7D;border-color: #BFB8B8"
+                           class="button btn disabled">Run</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- END row -->
+
+
+    </div>
+</div>
+
+<!-- Main -->
+
+
+<!-- Copyright -->
+<div id="copyright">
+    <div class="container">
+        Copyright &copy; 2018.Cloud Development Services Lab Operations HangZhou & Telco Cloud China.
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var num = getUrlParam('num');
+        var error = getUrlParam('error');
+        var id = getUrlParam('id');
+        var flag = true
+        if (num) {
+            addtotal(num);
+        }
+        if (error) {
+      //  adderror(error)
+            check_progress()
+            startcheck()
+        }
+        function startcheck() {
+            if(flag){
+                setTimeout(function () {
+                        check_progress();
+                        startcheck();
+                    }, 1000
+                );
+            }
+
+        }
+        function addtotal(num) {
+           var info = '<a href=\"/execute_rename/?num=' + num +'" class="button"">Run</a>';
+            $('#run').empty();
+            $('#run').append(info);
+            $('#satistic').empty();
+            $('#satistic').append('Total Switches : ' + num);
+
+        }
+
+     function adderror(error) {
+            $('#satistic').empty();
+            if (error == '0') {
+                $('#satistic').append('Rename Complete!');
+            }
+            else if(error = 'loading'){
+                $('#satistic').empty();
+                $('#satistic').append("LOADING...");
+
+            }
+            else{
+                 $('#satistic').append('Failed Switches : ' + error);
+                var info = '<a href="/log/" class="button btn">Log</a>';
+                $('#log').empty();
+                $('#log').append(info);
+            }
+
+
+        }
+        
+        function check_progress() {
+            $.getJSON('/check_progress/',{num:error}, function (ret) {
+                if (ret.error_log && ret.error_log != 'Error'){<!-- ret.error_log != '1'-->
+                    $('#satistic').empty();
+                    $('#satistic').append(ret.error_log);
+                    var info = '<a href="/log/" class="button btn">Log</a>';
+                    $('#run').empty();
+                    $('#run').append(info);
+                    flag = false
+                }
+                if (ret.progress){
+                    var info = '<a href="/stop_task/?id=' + id +'&url=/switch_rename/" class="button btn">stop</a>';
+                    $('#run').empty();
+                    $('#run').append(info);
+                    $('#satistic').empty();
+                    $('#satistic').append("<p>LOADING...("+ret.progress+")</p> Please do not close the page");
+                }
+                console.log(flag);
+
+            });
+        }
+    });
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    function Trim(strValue) {
+        return strValue.replace(/^s*|s*$/g, "");
+    }
+
+    function SetCookie(sName, sValue) {
+        document.cookie = sName + "=" + escape(sValue);
+    }
+
+    function GetCookie(sName) {
+        var aCookie = document.cookie.split(";");
+        for (var i = 0; i < aCookie.length; i++) {
+            var aCrumb = aCookie[i].split("=");
+            if (sName == Trim(aCrumb[0])) {
+                return unescape(aCrumb[1]);
+            }
+        }
+
+        return null;
+    }
+
+    function scrollback() {
+        if (GetCookie("scroll") != null) {
+            document.body.scrollTop = GetCookie("scroll")
+        }
+    }
+</script>
+
+</body>
+</html>

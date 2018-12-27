@@ -1,0 +1,16 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <form method="post" action="/departmentupload/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <input type="file" name="excel"/>
+            <input type="submit" name="cancel" value="Cancel" />
+            <input type="submit" name="upload" value="Upload"/>
+
+        </p>
+    </form>
+    <div>
+    <br><br>
+
+{% endblock %}

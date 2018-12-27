@@ -1,0 +1,109 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+        <script type="text/javascript">
+        function displayControl(){
+
+            if(document.getElementById("r1").checked){
+           document.getElementById("community").value=""
+                document.getElementById("v2").style.display=""
+                document.getElementById("v3").style.display="none"
+            }
+                if(document.getElementById("r2").checked){
+               document.getElementById("username").value=""
+                document.getElementById("password").value=""
+                document.getElementById("authority").value=""
+                 document.getElementById("authenproto").value=""
+                    document.getElementById("pripro").value=""
+                    document.getElementById("passphase").value=""
+                document.getElementById("v2").style.display="none"
+                document.getElementById("v3").style.display=""
+            }
+        }
+        </script>
+    <form method="post" action="/scan/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            IP subnet:&nbsp&nbsp<input type="text" id= "subnet" name="subnet"/>
+        DU:&nbsp&nbsp<input type="text" id= "du" name="du"/>
+        Location:&nbsp&nbsp<input type="text" id= "loc" name="loc"/>
+            <h5><i>exp. 10.1.1.0/24</i></h5><br><br>
+        SNMP version:
+
+            <input id="r1" type="radio" value="1" name="gender"onclick="displayControl()" >v2c</input>
+            <input id="r2" type="radio" value="0" name="gender" onclick="displayControl()" >v3</input>
+            <br>
+<br><br>
+            <div id="v2" style="display:none">
+            Community:&nbsp&nbsp<input type="text" name="community" id="community" /><br>
+            </div>
+        <div id="v3" style="display:none">
+        Username:&nbsp&nbsp<input type="text" id="username" name="username"/><br><br>
+            Password:&nbsp&nbsp&nbsp<input type="text" name="password" id="password"/><br><br>
+            Authority:&nbsp&nbsp&nbsp&nbsp <select name="authority" id="authority"/>
+            <option></option>
+            <option>noAuthNoPriv</option>
+              <option>authNoPriv</option>
+            <option>authPriv</option>
+        </select><br><br>
+            Authentication protocol(optional):&nbsp&nbsp <select name="authenproto" id="authenproto"/>
+            <option></option>
+            <option>MD5</option>
+              <option>SHA</option>
+        </select><br><br>
+            privacy protocol(optional):&nbsp&nbsp
+             <select name="pripro" id="pripro"/>
+            <option></option>
+            <option>DES</option>
+              <option>AES</option>
+        </select>
+            <br>
+            <br>
+            Passphase(optional):&nbsp&nbsp<input type="text" id= "passphase" name="passphase"/>
+        </div><br><br>
+            <input type="submit" name="cancel" value="Cancel" />
+            <input type="submit" name="upload" value="Scan"/>
+
+
+
+        </p>
+    </form>
+    <div>
+        {% if error %}
+            ---------------------------------------------------------------
+            <br>
+    error:  <h5 style="color:red">{{ error }}<h5>
+    {% endif %}
+
+    {% if total %}
+    ---------------------------------------------------------------
+        <p> Totally alive :<bold>{{total  }}</bold></p>
+
+    <p>Imported:<bold style="color:green">{{success_num}}</bold></p>
+        <p>Repeat:<bold style="color:red">{{fail_num}}</bold></p> <!--failure= repeat-->
+        <p>Failure:<bold style="color:red">{{no_response}}</bold></p> <!--repeat=no_response-->
+
+    {% endif %}
+     {% if success_ip_list %}
+        <p><bold><h2>Success imported:</h2></bold></p>
+        {% for item in success_ip_list %}
+    <li>{{ item }}</li>
+
+    {% endfor %}
+    {% endif %}
+    {% if fail_ip_list %}
+        <p><bold><h2>Repeat :</h2></bold></p>
+        {% for item in fail_ip_list %}
+    <li>{{ item }}</li>
+
+
+    {% endfor %}
+    {% endif %}
+{% if no_response_list %}
+        <p><bold><h2>Failure :</h2></bold></p>
+        {% for item in no_response_list %}
+    <li>{{ item }}</li>
+
+
+    {% endfor %}
+    {% endif %}
+{% endblock %}

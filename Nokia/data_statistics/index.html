@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/default.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!--[if IE 6]>
+    <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
+    <script src="js/jquery-1.11.0.min.js" 6></script>
+
+    <script src="js/init.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+	<link rel="stylesheet" href="css/skel-noscript.css" />
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <style type="text/css">
+        .demo {
+            padding: 2em 0;
+        }
+
+        .counter {
+
+            background-color: rgba(33, 125, 169, 0.001);
+            text-align: center;
+
+            position: relative;
+        }
+
+        .counter .counter-content {
+            padding: 30px 20px 50px;
+            color: #FFF;
+            position: relative;
+        }
+
+        .counter:before,
+        .counter:after,
+        .counter .counter-content:before,
+        .counter .counter-content:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            box-shadow: inset 0 2px 2px #000;
+            top: 15px;
+            left: 15px;
+        }
+
+        .counter:after {
+            left: auto;
+            right: 15px;
+        }
+
+        .counter .counter-content:before,
+        .counter .counter-content:after {
+            box-shadow: inset 0 -2px 2px #000;
+            top: auto;
+            bottom: 15px;
+        }
+
+        .counter .counter-content:after {
+            left: auto;
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .counter .counter-icon {
+            display: inline-block;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .counter .counter-value {
+            display: block;
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .counter .title {
+            font-size: 30px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.71);
+        }
+
+        @media only screen and (max-width: 990px) {
+            .counter {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+            font-family: 微软雅黑;
+        }
+
+        html, body, .mainbox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainbox header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: blue;
+            z-index: 3;
+            line-height: 55px;
+        }
+
+        .mainbox .right {
+            position: absolute;
+            top: 70px;
+            padding-left: 0px;
+            background: #efe9e9;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .mainbox .right .rightbox {
+            /*overflow-y:scroll;*/
+        }
+
+        .mainbox .right .rightbox .rightcon p {
+            text-align: center;
+        }
+
+        footer {
+            background: #000;
+            height: 0px;
+            line-height: 40px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 5;
+        }
+
+        footer p, header p, .left p {
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+
+        .left p {
+            margin-top: 300px;
+        }
+
+        .aimg {
+
+            background: url(css/pics03.jpg) no-repeat center center;
+            background-size: cover;
+
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+        function showhome() {
+            document.getElementById('homeli').className = "current_page_item";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "";
+            document.getElementById('vmli').className = "";
+            document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('suite').style.display = "none";
+            document.getElementById('vm').style.display = "none";
+            document.getElementById('copyright').style.display="";
+
+
+        }
+
+        function showfourbudget() {
+            document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "current_page_item";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "";
+            document.getElementById('vmli').className = "";
+            document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('suite').style.display = "none";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('vm').style.display = "none";
+            document.getElementById('fbFrame').src = "http://10.110.23.116/";
+//document.getElementById('fourbudget').contentWindow.location.reload(true);
+            document.getElementById('copyright').style.display="none";
+        }
+
+        function showmap() {
+            document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "current_page_item";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('vmli').className = "";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "";
+            document.getElementById('map').style.display = "block";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('suite').style.display = "none";
+            document.getElementById('vm').style.display = "none";
+            document.getElementById('copyright').style.display="none";
+        }
+
+        function showsuite() {
+            document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "current_page_item";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "";
+            document.getElementById('vmli').className = "";
+            document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('suite').style.display = "";
+            document.getElementById('vm').style.display = "none";
+            document.getElementById('suiteFrame').src = "http://10.110.23.88/";
+            document.getElementById('copyright').style.display="none";
+        }
+
+        function showarchive() {
+            document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('archiveli').className = "current_page_item";
+            document.getElementById('dashboardli').className = "";
+            document.getElementById('vmli').className = "";
+              document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('archive').style.display = "";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('suite').style.display = "none";
+            document.getElementById('vm').style.display = "none";
+             document.getElementById('archiveFrame').src = "http://10.110.23.222/";
+             document.getElementById('copyright').style.display="none";
+
+        }
+
+        function showdashboard() {
+               document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "current_page_item";
+            document.getElementById('vmli').className = "";
+              document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "";
+            document.getElementById('suite').style.display = "none";
+               document.getElementById('vm').style.display = "none";
+                document.getElementById('dashboardFrame').src = "http://10.110.23.254/";
+                document.getElementById('copyright').style.display="none";
+
+        }
+          function showvm() {
+               document.getElementById('homeli').className = "";
+            document.getElementById('jirali').className = "";
+            document.getElementById('suiteli').className = "";
+            document.getElementById('budgetli').className = "";
+            document.getElementById('archiveli').className = "";
+            document.getElementById('dashboardli').className = "";
+                 document.getElementById('vmli').className = "current_page_item";
+
+              document.getElementById('map').style.display = "none";
+            document.getElementById('fourbudget').style.display = "none";
+            document.getElementById('homepage').style.display = "none";
+            document.getElementById('archive').style.display = "none";
+            document.getElementById('dashboard').style.display = "none";
+            document.getElementById('suite').style.display = "none";
+            document.getElementById('vm').style.display = "";
+                document.getElementById('vmFrame').src = "http://10.108.183.41/";
+                document.getElementById('copyright').style.display="none";
+        }
+    </script>
+</head>
+<body>
+
+<div id="header" class="container"><img src="/static/css/nokia_logo.png">
+    <header>
+
+
+        <div id="menu">
+            <ul>
+                <li id="homeli" class="current_page_item"><a href="javascript:void(0)" onclick="showhome()">Homepage</a>
+                </li>
+                <li id="jirali"><a href="javascript:void(0)" onclick="showmap()">Autojira</a></li>
+                <li id="budgetli"><a href="javascript:void(0)" onclick="showfourbudget()">Auto4Budget</a></li>
+                <li id="vmli"><a href="javascript:void(0)" onclick="showvm()"> Auto VM Management and Recovery</a>
+                <li id="suiteli"><a href="javascript:void(0)" onclick="showsuite()">Telco CLoud Suite</a></li>
+                <li id="archiveli"><a href="javascript:void(0)" onclick="showarchive()">CDS Archive Server</a></li>
+                <li id="dashboardli"><a href="javascript:void(0)" onclick="showdashboard()">HZ R&D Network Dashboard</a>
+
+                </li>
+
+
+            </ul>
+        </div>
+
+    </header>
+</div>
+<body class="homepage">
+<div id="header-wrapper">
+    <div class="homp" id="homepage">
+        <div class="container aimg">
+
+            <span class="fa fa-cubes" style='margin-left: 0%;'></span>
+            <section style="padding-top:13vh;height:200vh;text-align:center;">
+
+                <header><h2 style="color:wheat"></h2></header>
+
+                <header><h2 style="color:white">The total hits we have reached for each site so far </h2></header>
+                <div class="demo">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+                                        <i class="counter-icon fa fa-globe"></i>
+                                        <span class="counter-value" id="autojira"></span>
+                                        <h3 class="title">Autojira</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbspAlmost all the services in lab support are
+                                            requested by Jira. But it usually
+                                            takes too much time for users and supporters to fill in the info and clarify
+                                            the requirement offline (especially ordering). Auto Jira is designed to
+                                            solve effort waste and time consumed in raising tickets.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+                                        <i class="counter-icon fa fa-user"></i>
+                                        <span class="counter-value" id="budget" value=""></span>
+                                        <h3 class="title">Auto4Budget</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp Currently, the record updating operation in
+                                            4Budget tool requires manual data input in 4budget system, which is
+                                            inefficient to copy and paste data into 4Budget by manual. By python script,
+                                            it will be automatically that read the data from Excel file and update it
+                                            into 4Budget system.
+                                            It will release the repetitive manual work.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+                                        <i class="counter-icon fa fa-film"></i>
+                                        <span class="counter-value" id="VM"></span>
+                                        <h3 class="title">AUTO VM MANAGEMENT AND RECOVERY</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp Telco Cloud Environment Set Up & Maintenance Suite
+                                            is developed and maintained fully by Hangzhou SRDT LSD team. To increase the
+                                            cloud delivery efficiency, this suite covered almost all the operations
+                                            after the hardware is ready. Please enjoy the tool and step into the world
+                                            of the cloud.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="row">
+                           <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+                                        <i class="counter-icon fa fa-star"></i>
+                                        <span class="counter-value" id="Suit"></span>
+                                        <h3 class="title">Telco Cloud Suite</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp Telco Cloud Environment Set Up & Maintenance Suite
+                                            is developed and maintained fully by Hangzhou SRDT LSD team. To increase the
+                                            cloud delivery efficiency, this suite covered almost all the operations
+                                            after the hardware is ready. Please enjoy the tool and step into the world
+                                            of the cloud.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+          
+                                        <i class="counter-icon fa fa-glass"></i>
+                                        <span class="counter-value" id="Archive">999</span>
+                                        <h3 class="title">CDS ARCHIVE SERVER</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp Telco Cloud Environment Set Up & Maintenance Suite
+                                            is developed and maintained fully by Hangzhou SRDT LSD team. To increase the
+                                            cloud delivery efficiency, this suite covered almost all the operations
+                                            after the hardware is ready. Please enjoy the tool and step into the world
+                                            of the cloud.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                                 <div class="col-md-4 col-sm-3">
+                                <div class="counter">
+                                    <div class="counter-content">
+                                        <i class="counter-icon fa fa-film"></i>
+                                        <span class="counter-value" id="Dashboard"></span>
+                                        <h3 class="title">HZ R&D Networkwork dashboard</h3>
+                                        <p style="text-align:left;font-family: cursive;color:papayawhip">
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp Telco Cloud Environment Set Up & Maintenance Suite
+                                            is developed and maintained fully by Hangzhou SRDT LSD team. To increase the
+                                            cloud delivery efficiency, this suite covered almost all the operations
+                                            after the hardware is ready. Please enjoy the tool and step into the world
+                                            of the cloud.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <br> <br> <br> <br> <br> <br> <br><br>
+
+                <br> <br> <br> <br>
+            </section>
+        </div>
+
+    </div>
+</div>
+</body>
+<div class="map" id="map" style="height:739px;display:none">
+    <iframe src="http://lab.nsn-intra.net/autojira/main/" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+<div class="fourbudget" id="fourbudget" style="height:739px;display:none">
+    <iframe id="fbFrame" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+<div class="suite" id="suite" style="display:none;height:739px;">
+    <iframe id="suiteFrame" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+<div class="archive" id="archive" style="display:none;height:739px;">
+    <iframe id="archiveFrame" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+<div class="dashboard" id="dashboard" style="display:none;height:739px;">
+    <iframe id="dashboardFrame" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+<div class="vm" id="vm" style="display:none;height:739px;">
+    <iframe id="vmFrame" frameborder="0" scrolling="yes" width="100%"
+            height="100%"></iframe>
+</div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.0.min.js"><\/script>')</script>
+<script type="text/javascript">
+    var flag = true;
+    $(document).ready(function () {
+
+        var autojiragetting = {
+            url: "http://10.110.23.71/autojirara/",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+
+                    $("#autojira").empty()
+                    $("#autojira").append(data.autojira);
+                }
+            }
+        };
+        var suitegetting = {
+            url: "http://10.110.23.88/suite/",
+            type: 'POST',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+                    $("#Suit").empty()
+                    $("#Suit").append(data.suite);
+                }
+            }
+        };
+        var fourbudgetgetting = {
+            url: "http://10.110.23.116/total4budget/",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+                    $("#budget").empty()
+                    $("#budget").append(data.fourbudget);
+                }
+            }
+        };
+        var vmgetting = {
+            url: "http://10.108.183.41/vm/",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+                    $("#VM").empty()
+                    $("#VM").append(data.vm);
+                }
+            }
+        };
+          var archivegetting = {
+            url: "http://10.110.23.222/archive/",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+                    $("#Archive").empty()
+                    $("#Archive").append(data.archive);
+                }
+            }
+        };
+           var dashboardgetting = {
+            url: "http://10.110.23.254/dashboard/",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data == "" || data == undefined) {
+                } else {
+                    $("#Dashboard").empty()
+                    $("#Dashboard").append(data.dashboard);
+                }
+            }
+        };
+           $.ajax(dashboardgetting)
+        window.setInterval(function () {
+            $.ajax(dashboardgetting)
+        }, 600000);
+             $.ajax(archivegetting)
+        window.setInterval(function () {
+            $.ajax(archivegetting)
+        }, 600000);
+        $.ajax(vmgetting)
+        window.setInterval(function () {
+            $.ajax(vmgetting)
+        }, 600000);
+        $.ajax(autojiragetting)
+        window.setInterval(function () {
+            $.ajax(autojiragetting)
+        }, 600000);
+
+        $.ajax(suitegetting)
+        window.setInterval(function () {
+            $.ajax(suitegetting)
+        }, 600000);
+
+        $.ajax(fourbudgetgetting)
+        window.setInterval(function () {
+            $.ajax(fourbudgetgetting)
+        }, 600000);
+        // $.ajax({
+        //        url: "http://10.110.23.71/autojirara/",
+        //        type: 'POST',
+        //
+        //        dataType:'json',
+        //
+        //        async:true,
+        //
+        //        success: function (data) {
+        //        alert(data.data);
+        //            if(data==""||data== undefined){
+        //                alert("empty str");
+        //            }else{
+        //            $("#autojira").empty()
+        //            $("#autojira").append(data.data);}
+        //
+        //            $('.counter-value').each(function () {
+        //                $(this).prop('Counter', 0).animate({
+        //                    Counter: $(this).text()
+        //                }, {
+        //                    duration: 750,
+        //                    easing: 'swing',
+        //                    step: function (now) {
+        //                        $(this).text(Math.ceil(now));
+        //                    }
+        //                });
+        //            });
+        //
+        //        },
+        //        error: function() {
+        //            alert("wrong");
+        //
+        //        }
+        //    });
+        // $.ajax(options);
+        // alert(htmlobj);
+        // $("#autojira").html(htmlobj.responseText);
+
+    });
+
+
+</script>
+
+    <div id="copyright">Copyright 2018.Cloud Development Services Lab Operations HangZhou & Telco Cloud China. Any problem please click
+        <a href="mailto:operations.telco-cloud@nokia.com"><strong style="color:gold">here</strong></a>.
+        <br>
+        pageview:</div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/usr/lib/python2.7/site-packages/ce[2018-07-27 13:27:53,288: INFO/MainProcess] beat: Starting...
+[2018-07-27 13:27:53,288: INFO/MainProcess] Writing entries (0)...
+[2018-07-27 13:27:53,378: INFO/MainProcess] Scheduler: Sending due task scan (switch.tasks.scan)
+[2018-07-27 13:27:53,384: INFO/MainProcess] Writing entries (1)...
+[2018-07-27 13:27:53,415: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:27:53,419: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:27:53,422: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:27:53,424: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:27:53,425: INFO/MainProcess] Scheduler: Sending due task Check Info (switch.tasks.get_Info_snmp)
+[2018-07-27 13:27:53,427: INFO/MainProcess] Scheduler: Sending due task backup (switch.tasks.command_backup)
+[2018-07-27 13:27:53,429: INFO/MainProcess] Scheduler: Sending due task Get name (switch.tasks.get_Name)
+[2018-07-27 13:28:29,636: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:28:53,420: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:28:53,422: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:28:53,424: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:28:53,426: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:29:29,639: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:29:53,421: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:29:53,424: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:29:53,426: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:29:53,428: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:30:29,641: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:30:53,416: INFO/MainProcess] Writing entries (8)...
+[2018-07-27 13:30:53,448: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:30:53,449: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:30:53,451: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:30:53,453: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:31:29,643: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:31:53,449: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:31:53,451: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:31:53,453: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:31:53,454: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:32:29,646: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:32:53,450: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:32:53,452: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:32:53,454: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:32:53,455: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:33:29,647: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:33:53,466: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:33:53,471: INFO/MainProcess] Writing entries (5)...
+[2018-07-27 13:33:53,573: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:33:53,575: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:33:53,577: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:34:29,652: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:34:53,468: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:34:53,575: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:34:53,578: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:34:53,580: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:35:29,653: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:35:53,471: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:35:53,576: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:35:53,581: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:35:53,583: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:36:29,654: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:36:53,472: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:36:53,578: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:36:53,579: INFO/MainProcess] Writing entries (5)...
+[2018-07-27 13:36:53,640: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:36:53,641: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:37:29,656: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:37:53,473: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:37:53,579: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:37:53,641: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:37:53,642: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:38:29,658: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:38:53,474: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:38:53,580: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:38:53,642: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:38:53,643: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:39:29,659: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:39:53,476: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:39:53,583: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:39:53,644: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:39:53,646: INFO/MainProcess] Writing entries (5)...
+[2018-07-27 13:39:53,698: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:40:29,661: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:40:53,478: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:40:53,584: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:40:53,646: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:40:53,701: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:41:29,663: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:41:53,481: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:41:53,586: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:41:53,650: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:41:53,703: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:42:29,664: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:42:53,483: INFO/MainProcess] Scheduler: Sending due task ping (switch.tasks.ping_IPAddress)
+[2018-07-27 13:42:53,587: INFO/MainProcess] Scheduler: Sending due task get brand (switch.tasks.save_brand)
+[2018-07-27 13:42:53,651: INFO/MainProcess] Scheduler: Sending due task get data (switch.tasks.save_data)
+[2018-07-27 13:42:53,704: INFO/MainProcess] Scheduler: Sending due task abnomal (switch.tasks.gather_abnormal)
+[2018-07-27 13:42:53,706: INFO/MainProcess] Writing entries (5)...
+[2018-07-27 13:43:29,666: INFO/MainProcess] Scheduler: Sending due task Check name (switch.tasks.check_standard)
+[2018-07-27 13:36:30,157: INFO/MainProcess] Task switch.tasks.check_standard[9a16d7b5-cf76-41df-82f6-bced3abf17f9] succeeded in 0.498336261138s: None
+[2018-07-27 13:36:53,580: INFO/MainProcess] Received task: switch.tasks.save_brand[f493db3f-e153-48e6-aae5-322c9c767013]
+[2018-07-27 13:36:53,644: INFO/MainProcess] Received task: switch.tasks.gather_abnormal[e0f00d60-6b7d-41e0-8329-0a6a6da261c8]
+[2018-07-27 13:36:53,645: INFO/MainProcess] Task switch.tasks.save_brand[f493db3f-e153-48e6-aae5-322c9c767013] succeeded in 0.0624931501225s: None
+[2018-07-27 13:36:53,713: INFO/MainProcess] Task switch.tasks.gather_abnormal[e0f00d60-6b7d-41e0-8329-0a6a6da261c8] succeeded in 0.0677224709652s: None
+[2018-07-27 13:37:44,260: INFO/MainProcess] Task switch.tasks.ping_IPAddress[924d8aac-f1c0-4da7-985e-b5aff0ac6677] succeeded in 110.783127981s: None
+[2018-07-27 13:37:53,476: INFO/MainProcess] Received task: switch.tasks.ping_IPAddress[33b8e360-01b2-444c-aac8-1e09b3b366c5]
+[2018-07-27 13:37:53,643: INFO/MainProcess] Received task: switch.tasks.save_data[7d2b3c53-bdf6-4742-9f0a-25ad4718a516]
+[2018-07-27 13:37:53,703: INFO/MainProcess] Task switch.tasks.save_data[7d2b3c53-bdf6-4742-9f0a-25ad4718a516] succeeded in 0.0579597488977s: None
+[2018-07-27 13:38:29,661: INFO/MainProcess] Received task: switch.tasks.check_standard[3ee0bae1-a15a-4ef8-904a-4b9491a80f14]
+[2018-07-27 13:38:30,173: INFO/MainProcess] Task switch.tasks.check_standard[3ee0bae1-a15a-4ef8-904a-4b9491a80f14] succeeded in 0.51035256125s: None
+[2018-07-27 13:38:53,583: INFO/MainProcess] Received task: switch.tasks.save_brand[f654fa54-2619-4356-8260-9c0ee52c3518]
+[2018-07-27 13:38:53,646: INFO/MainProcess] Received task: switch.tasks.gather_abnormal[178fc421-e5bd-476a-9626-87eee1bc85f2]
+[2018-07-27 13:38:53,680: INFO/MainProcess] Task switch.tasks.save_brand[f654fa54-2619-4356-8260-9c0ee52c3518] succeeded in 0.0943830921315s: None
+[2018-07-27 13:38:53,681: INFO/MainProcess] Task switch.tasks.gather_abnormal[178fc421-e5bd-476a-9626-87eee1bc85f2] succeeded in 0.0340632963926s: None
+[2018-07-27 13:39:46,303: INFO/MainProcess] Task switch.tasks.ping_IPAddress[33b8e360-01b2-444c-aac8-1e09b3b366c5] succeeded in 112.824488308s: None
+[2018-07-27 13:39:53,483: INFO/MainProcess] Received task: switch.tasks.ping_IPAddress[63a8f778-8c59-40c9-be2f-143dcce30440]
+[2018-07-27 13:39:53,648: INFO/MainProcess] Received task: switch.tasks.save_data[14911c2b-05a9-4aef-bc9d-106f34adae74]
+[2018-07-27 13:39:53,719: INFO/MainProcess] Task switch.tasks.save_data[14911c2b-05a9-4aef-bc9d-106f34adae74] succeeded in 0.0697465301491s: None
+[2018-07-27 13:40:29,665: INFO/MainProcess] Received task: switch.tasks.check_standard[7738a957-cbf4-4068-b33e-77c82355bcd9]
+[2018-07-27 13:40:30,195: INFO/MainProcess] Task switch.tasks.check_standard[7738a957-cbf4-4068-b33e-77c82355bcd9] succeeded in 0.528450631071s: None
+[2018-07-27 13:40:53,588: INFO/MainProcess] Received task: switch.tasks.save_brand[178fa73a-216a-44c4-8de2-53872a48abf4]
+[2018-07-27 13:40:53,704: INFO/MainProcess] Received task: switch.tasks.gather_abnormal[7a0037fd-280a-40a5-87a6-742ce04d60b5]
+[2018-07-27 13:40:53,727: INFO/MainProcess] Task switch.tasks.gather_abnormal[7a0037fd-280a-40a5-87a6-742ce04d60b5] succeeded in 0.0212737265974s: None
+[2018-07-27 13:41:44,277: INFO/MainProcess] Task switch.tasks.ping_IPAddress[63a8f778-8c59-40c9-be2f-143dcce30440] succeeded in 110.790978133s: None
+[2018-07-27 13:41:53,485: INFO/MainProcess] Received task: switch.tasks.ping_IPAddress[a892fe3b-45c8-4121-a290-20dea3739eab]
+[2018-07-27 13:41:53,653: INFO/MainProcess] Received task: switch.tasks.save_data[9bc37cec-36f1-4689-b182-50e7de0203f5]
+[2018-07-27 13:41:53,697: INFO/MainProcess] Task switch.tasks.save_data[9bc37cec-36f1-4689-b182-50e7de0203f5] succeeded in 0.0417867838405s: None
+[2018-07-27 13:42:29,667: INFO/MainProcess] Received task: switch.tasks.check_standard[d649fe9b-9bdf-4377-b668-7588f122b815]
+[2018-07-27 13:42:30,166: INFO/MainProcess] Task switch.tasks.check_standard[d649fe9b-9bdf-4377-b668-7588f122b815] succeeded in 0.497010082006s: None
+[2018-07-27 13:42:53,591: INFO/MainProcess] Received task: switch.tasks.save_brand[967922dd-9a8e-42e1-b0a0-33a0a0bd68d3]
+[2018-07-27 13:42:53,667: INFO/MainProcess] Task switch.tasks.save_brand[967922dd-9a8e-42e1-b0a0-33a0a0bd68d3] succeeded in 0.0740582519211s: None
+[2018-07-27 13:42:53,707: INFO/MainProcess] Received task: switch.tasks.gather_abnormal[41cca3d9-fcfd-4034-813a-962b619b0e81]
+[2018-07-27 13:42:53,742: INFO/MainProcess] Task switch.tasks.gather_abnormal[41cca3d9-fcfd-4034-813a-962b619b0e81] succeeded in 0.0337284090929s: None
+[2018-07-27 13:43:43,971: INFO/MainProcess] Task switch.tasks.ping_IPAddress[a892fe3b-45c8-4121-a290-20dea3739eab] succeeded in 110.484337484s: None

@@ -1,0 +1,60 @@
+#!/bin/bash
+#test -e /expect_zabbix/check.sh && rm -rf /expect_zabbix/check.sh
+#wget -P /expect_zabbix/ http://10.107.2.44/zabbix_agent/check.sh
+#. /expect_zabbix/check.sh
+echo "################################yum mirros configure#############################"
+
+rm -rf /root/zabbix_install.sh
+rm -rf /root/yumupdate.sh
+echo "#########################zabbix-agent remove#####################################"
+IP_LOCAL=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:" | grep "10."` 
+echo ""
+echo "DEL zabbix-2.2.2!!!!!"
+[ -d /etc/zabbix ] && rm -rf /etc/zabbix
+[ -f /etc/zabbix_agentd ] && rm -rf /etc/init.d/zabbix_agentd
+[ -d /usr/local/zabbix ] && rm -rf /usr/local/zabbix
+[ -d /zabbix-2.2.2 ] && rm -rf /zabbix-2.2.2
+[ -f /zabbix_install.sh ] && rm -rf /zabbix_install.sh
+[ -f /etc/yum.repos.d/uterpm.repo ] && mv /etc/yum.repos.d/uterpm.repo /
+pkill zabbix_agentd
+echo "DEL done"
+echo "#########################zabbix-agent install#####################################"
+echo "INSTALL zabix-3!!!!"
+export | grep "http_proxy=" || export http_proxy=http://87.254.212.121:8080/ 
+#export http_proxy=http://87.254.212.121:8080/
+#rpm -ihv http://mirrors.aliyun.com/zabbix/zabbix/3.0/rhel/6/x86_64/zabbix-release-3.0-1.el6.noarch.rpm
+rpm -ihv http://mirrors.aliyun.com/zabbix/zabbix/3.2/rhel/6/x86_64/zabbix-release-3.2-1.el6.noarch.rpm
+rpm -ivh http://mirrors.aliyun.com/zabbix/zabbix/3.2/rhel/6/x86_64/zabbix-agent-3.2.0-1.el6.x86_64.rpm
+rpm -ivh http://10.107.2.44/zabbix_agent/zabbix-agent-3.2.0-1.el6.x86_64.rpm
+echo "#############################################################"
+sed -i 's/^Server=127.0.0.1/Server=10.107.2.58/g' /etc/zabbix/zabbix_agentd.conf && echo "Server OK.." || exit 200 
+sed -in "s#^Hostname=Zabbix server#Hostname=$IP_LOCAL#g" /etc/zabbix/zabbix_agentd.conf && echo "Hostname OK..."
+sed -i 's/^ServerActive=127.0.0.1/ServerActive=10.107.2.58/g' /etc/zabbix/zabbix_agentd.conf && echo "ServerActive OK..."
+echo "############################iptalbes and selinux close##############################"
+echo -e "\033[34mwaiting..\033[0m"
+service iptables stop || systemctl stop iptables.service
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 10050 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 10051 -j ACCEPT
+chkconfig iptables off
+chkconfig --del iptables 
+setenforce 0
+SE=`cat /etc/selinux/config | grep "^SELINUX="`
+sed -i "s/$SE/SELINUX=disabled/g" /etc/selinux/config
+echo "################################################"
+echo -e "\033[34m#start  boot option\033[0m"
+chkconfig --add zabbix-agent
+chkconfig zabbix-agent on
+ps -aux | grep zabbix-agent
+cat /etc/services | grep "zabbix*" &>/dev/null || echo "zabbix_agent    10050/tcp" >> /etc/services
+cat /etc/services | grep "zabbix*" &>/dev/null || echo "zabbix_agent    10050/udp" >> /etc/services
+service zabbix-agent start && netstat -tunlp | grep 10050
+echo -e "\033[31m configure file   \033[34m"
+egrep -v "(^#|^$)" /etc/zabbix/zabbix_agentd.conf
+###################
+echo " "
+echo "please waiting ..."
+rm -rf zabbix_install.sh
+unset http_proxy
+rm -rf /etc/yum.repos.d/zabbix.repo
+mv /uterpm.repo /etc/yum.repos.d/
+yum remove zabbix-release -y

@@ -1,0 +1,46 @@
+#!/bin/bash
+###########################################################################
+#Choose configure 
+#yum
+#server 
+#version 1.0
+###########################################################################
+echo -e "\033[34mstop server:\033[0m"
+service iptables stop
+service NetworkManager stop
+chkconfig --del iptables
+chkconfig --del NetworkManager
+setenforce 0
+cat /etc/redhat-release | cut -d' ' -f3 | cut -d. -f1 >/so.txt
+export http_proxy=http://87.254.212.121:8080/
+#read -p "Input source.1/2/3:" MI
+if [ $(cat /so.txt) -eq 6 ];then
+	cd /etc/yum.repos.d/
+	[ -f /etc/yum.repos.d/CentOS-Base.repo ] && mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak && echo "backup local source OK!"
+	[ -f /etc/yum.repos.d/CentOS6-Base.repo ] && rm -rf /etc/yum.repos.d/CentOS6-Base.repo
+	wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+	yum clean all &>/dev/null && echo "Clean Yum cache OK" || echo "Loading error." 
+	yum list
+	rm -rf /so.txt
+elif [ $(cat /so.txt) -eq 7 ];then
+	cd /etc/yum.repos.d/
+	[ -f /etc/yum.repos.d/CentOS-Base.repo ] && mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak && echo "backup local source OK!"
+        wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+        yum clean all &>/dev/null && echo "Clean Yum cache OK" || echo "Loading error." && exit 4
+        echo "please waiting..." 
+        yum makecache
+	yum list
+	rm -rf /so.txt
+elif [ $(cat /so.txt) -eq 5 ];then
+	[ -f /etc/yum.repos.d/CentOS-Base.repo ] && mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak && echo "backup local source OK!"
+	[ -f /etc/yum.repos.d/CentOS5-Base.repo ] && echo "yum source exist" && yum list && exit 4
+	[ ! -f /etc/yum.repos.d/CentOS5-Base.repo ] && wget http://10.107.2.57/.help/CentOS5-Base.repo
+	[ -f /etc/yum.repos.d/CentOS5-Base.repo ] && yum clean all &>/dev/null && echo "Clean Yum cache OK" || echo "Loading error." 
+	yum makecache
+	yum list
+	rm -rf /so.txt
+	
+else
+	echo "error option"
+	exit 4
+fi

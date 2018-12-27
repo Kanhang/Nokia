@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+        body
+			{
+
+			font-size: 14px;
+			text-align: center;
+			overflow: visible;
+			color: black;
+			}
+		a:hover
+			{
+			overflow: visible;
+			font-size: 20px;
+			font-variant: small-caps;
+			text-decoration: none;
+			background-color: #999;
+			}
+		a:link, a:visited
+			{
+			color: Black;
+			font-size: 14px;
+			font-variant: small-caps;
+			text-decoration: none;
+			}
+        </style>		
+</head>
+
+<body style="text-align:center">
+<div style=" margin:auto; height:1200px;width:1200px">
+
+<div style="float:left; margin-right: 60px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> HETRAN Business Line</p>
+<g:background>
+			
+		    
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+			<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+			 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32929&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+  </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+<div style="float:left; margin-right: 60px; margin-bottom:100px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> 3G Core BL</p>
+<g:background>
+			
+		    
+			<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+			<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+			 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32923&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+                
+<div style="float:left; margin-right: 0px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> 5G Business Line</p>
+<g:background>
+			
+		    
+			<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+			<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+            	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+			 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+            <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32937&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+<div style="float:left; margin-right: 60px; margin-bottom:100px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> LTE -N Business Line</p>
+<g:background>
+			
+		    
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+ 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32930&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<div style="float:left; margin-right: 60px; margin-bottom:100px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> Radio Frequency and Advanced Antennas</p>
+<g:background>
+			
+		    
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+ 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修HW Repairing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32931&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<div style="float:left; margin-right: 0px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> Telco Cloud Infra BL</p>
+<g:background>
+			
+		    
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+ 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32926&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<div style="float:left; margin-right: 60px; height:250px; width:350px ">
+<p style="font-size:24px; color: #00C;"> System R&D and Tools</p>
+<g:background>
+			
+		    
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=领取%20Equipment%20and%20Installation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A安装位置Location:%0A">领&装 Equipment Requisition&Installation</a> <br />
+			
+	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=拆%20Uninstallation&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=设备%20Equipment:(Equipment%20ID/NAMS%20ID/...):%0A拆卸位置Location:%0A设备状态%20Equipment%20Status%20OK%20or%20NOK%0A情况描述%20 Issue%20description:">拆 Uninstallation</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=连线%20Cabling&priority=3&customfield_15700=26307&customfield_15700:1=26308&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=连线类别%20Cable%20Type：（单模/多模/射频线/电源线/光模块/网线/串口线/...）:%0A设备位置Location（Source&Destination）:%0A连线数量%20Quantity：">连线 Cabling</a> <br />
+            
+   	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20系统安装%20System%20Installation &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需安装的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统安装 System Installation</a> <br />
+
+
+ 	<a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=服务器/PC%20软件升级%20SW%20Upgrade &priority=3&customfield_15700=26314&customfield_15700:1=26315&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=服务器/PC%20型号%20Type：（Airframe/hp%20blade%20BL380G9/DL360G9...)%0A需升级的系统版本%20Version：Windows/Linux/NCIR/...):%0A
+位置%20Location:">服务器/PC 系统升级 System Upgrade</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=模块重刷%20Module%20refreshingade &priority=3&customfield_15700=26331&customfield_15700:1=None&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=Equipment%20ID:%0A主区版本%20Active%20Partition%20Version：%0A
+备区版本%20Passive%20Partition%20Version：%0A基站Location：">模块重刷 Module refreshing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=电脑硬件维修%20HW%20Repairing &priority=3&customfield_15700=26331&customfield_15700:1=26332&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=故障原因%20Issue：%0A
+故障设备%20Equipment%20ID/SN：">电脑硬件维修 HW Repairing</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=配置交换机%20Switch%20Configuration &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=switch%20IP%20or%20name：
+%0ARequirement：">配置交换机 Switch Configuration</a> <br />
+
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=分配IP%20IP%20Planning &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=_____段_____ 个">配置交换机 Switch Configuration</a> <br />
+			
+    <a
+			href="https://srvjira.int.net.nokia.com/secure/CreateIssueDetails!init.jspa?pid=15607&issuetype=89&summary=Trouble%20Shooting &priority=3&customfield_15700=26327&customfield_15700:1=26329&customfield_15615=26033&customfield_15131=26275&customfield_15132=32932&components=24374&description=switch%20IP%20or%20name：%0ADetail%20Issue">Trouble Shooting</a> <br />
+            
+            </g:background>	
+            </div>
+            </div>
+            
+</body>
+</html>
